@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import com.google.common.base.Predicate;
+
 public class NumberPlayList 
 {
 
@@ -61,7 +63,11 @@ public class NumberPlayList
 		
 		//Method 6:Implicit lambda function to print double vale
 		Function<Integer, Double> toDoubleFunction = Integer::doubleValue; 
-		myNumberList.forEach(number->{System.out.println("Method6: foreach lambda implement value: "+toDoubleFunction.apply(number));});
+		myNumberList.forEach(number->{System.out.println("Method6: foreach lambda double value: "+toDoubleFunction.apply(number));});
+		
+		//Method 7:Implicit lambda function to check if number even or odd
+		Predicate<Integer> isEvenFunction = number->number>0 && number%2==0;
+		myNumberList.forEach(number->{System.out.println("Method6: foreach lambda check even : "+isEvenFunction.test(number));});
 
 	}
 
