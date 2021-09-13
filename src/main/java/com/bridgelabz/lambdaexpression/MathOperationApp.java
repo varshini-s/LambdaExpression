@@ -6,6 +6,10 @@ public class MathOperationApp
 	interface MathFunctionIF
 	{
 		int calculate(int a,int b);
+		static void printResult(int a,int b,String function,MathFunctionIF functionObject)
+		{
+			System.out.println("Result of "+function+" is "+functionObject.calculate(a, b));
+		}
 		
 	}
 
@@ -21,7 +25,12 @@ public class MathOperationApp
 		System.out.println("Subtraction result is :"+subtract.calculate(3, 1));
 		System.out.println("Multiplication result is :"+multiply.calculate(2, 3));
 		System.out.println("Division result is :"+divide.calculate(4, 4));
-
+		
+		MathFunctionIF.printResult(2, 3, "Addition", add);
+		MathFunctionIF.printResult(3, 1, "Subtraction", subtract);
+		MathFunctionIF.printResult(2, 3, "Multiplication", multiply);
+		MathFunctionIF.printResult(4, 4, "Division", divide);
+		
 	}
 
 }
