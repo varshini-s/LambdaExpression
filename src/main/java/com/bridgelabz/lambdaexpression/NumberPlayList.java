@@ -129,7 +129,7 @@ public class NumberPlayList
 		
 		//Method 15:sorting in ascending
 		List<Integer> sortedList = myNumberList.stream()
-				.sorted((n1,n2)->n1.compareTo(n))
+				.sorted((number1,number2)->number1.compareTo(number2))
 				.collect(Collectors.toList());
 
 		System.out.println("Method 15:Sorted list "+sortedList);
