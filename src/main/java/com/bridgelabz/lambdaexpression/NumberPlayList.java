@@ -81,8 +81,8 @@ public class NumberPlayList
 		List<Double> streamList = myNumberList.stream()
 								.filter(isEvenFunction)
 								.peek(number->System.out.println(" peek even number: "+number))
-								.map(toDoubleFunction);
-								
+								.map(toDoubleFunction)
+								.collect(Collectors.toList());
 		System.out.println("Method9: printing double list"+streamList);
 		
 		
