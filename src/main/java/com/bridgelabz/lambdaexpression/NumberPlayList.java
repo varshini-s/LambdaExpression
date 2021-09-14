@@ -85,14 +85,22 @@ public class NumberPlayList
 								.collect(Collectors.toList());
 		System.out.println("Method9: printing double list"+streamList);
 		
-		//Method 10:list the first even
-				List<Integer> evenList=myNumberList.stream()
-									 .filter(isEvenFunction)
-									 .collect(Collectors.toList());
+		//Method 10:even number list
+		List<Integer> evenList=myNumberList.stream()
+								.filter(isEvenFunction)
+								.collect(Collectors.toList());
 									 
-				System.out.println("method10:printing  even list :"+evenList);
+		System.out.println("method10:printing  even list :"+evenList);
 		
+		//Method 11:list the first even
+		Integer firstElement=myNumberList.stream()
+							.filter(isEvenFunction)
+							.peek(number->System.out.println(" peek even number: "+number))
+							.findFirst()
+							.orElse(null);
+		System.out.println("method11:First even"+firstElement);
 							  
+				
 		
 		
 		
