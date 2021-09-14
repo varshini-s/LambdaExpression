@@ -127,6 +127,13 @@ public class NumberPlayList
 
 		System.out.println("All even"+allEven+" one even : "+oneEven+" none multiple of six "+noneMultipleOfSix);
 		
+		//Method 15:sorting in ascending
+		List<Integer> sortedList = myNumberList.stream()
+				.sorted((n1,n2)->n1.compareTo(n))
+				.collect(Collectors.toList());
+
+		System.out.println("Method 15:Sorted list "+sortedList);
+
 	}
 
 }
