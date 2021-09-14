@@ -115,7 +115,10 @@ public class NumberPlayList
 							.orElse(null);
 		System.out.println("Method12: maximum even"+maximumNumber);
 		
-		
+		//Method 13:average of numbers
+		Integer sum=myNumberList.stream().reduce(0, Integer::sum);
+		long count=myNumberList.stream().count();
+		System.out.println("Method13: average of "+sum+"/"+count+" = "+sum/count);
 		
 	}
 
