@@ -101,6 +101,19 @@ public class NumberPlayList
 		System.out.println("method11:First even"+firstElement);
 							  
 				
+		//Method 11:Minimum even numbers
+		Integer minimumNumber=myNumberList.stream()
+							.filter(isEvenFunction)
+							.min((n1,n2)->n1-n2)
+							.orElse(null);
+		System.out.println("Method11: minimum even"+minimumNumber);
+
+		//Method 12:maximum even number
+		Integer maximumNumber=myNumberList.stream()
+							.filter(isEvenFunction)
+							.max(Comparator.comparing(Integer::intValue))
+							.orElse(null);
+		System.out.println("Method12: maximum even"+maximumNumber);
 		
 		
 		
