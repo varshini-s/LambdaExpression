@@ -76,6 +76,15 @@ public class NumberPlayList
 		//Method 8:processing numbers using stream
 		myNumberList.stream().forEach(number->{System.out.println("Method8 :  stream foreach   value: "+number);});
 		
+		//Method 9:Process the stream,apply operations on stream and store the result
+		
+		List<Double> streamList = myNumberList.stream()
+								.filter(isEvenFunction)
+								.peek(number->System.out.println(" peek even number: "+number))
+								.map(toDoubleFunction);
+								
+		System.out.println("Method9: printing double list"+streamList);
+		
 		
 							  
 		
