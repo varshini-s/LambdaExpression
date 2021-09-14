@@ -1,10 +1,14 @@
 package com.bridgelabz.lambdaexpression;
 
+
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.stream.Collectors;
+
 
 import com.google.common.base.Predicate;
 
@@ -67,8 +71,16 @@ public class NumberPlayList
 		
 		//Method 7:Implicit lambda function to check if number even or odd
 		Predicate<Integer> isEvenFunction = number->number>0 && number%2==0;
-		myNumberList.forEach(number->{System.out.println("Method6: foreach lambda check even : "+isEvenFunction.test(number));});
+		myNumberList.forEach(number->{System.out.println("Method7: foreach lambda check even : "+isEvenFunction.test(number));});
 
+		//Method 8:processing numbers using stream
+		myNumberList.stream().forEach(number->{System.out.println("Method8 :  stream foreach   value: "+number);});
+		
+		
+							  
+		
+		
+		
 	}
 
 }
