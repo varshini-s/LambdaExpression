@@ -120,6 +120,13 @@ public class NumberPlayList
 		long count=myNumberList.stream().count();
 		System.out.println("Method13: average of "+sum+"/"+count+" = "+sum/count);
 		
+		//Method 14:checking for all even,one even and none are divisible of 6
+		boolean allEven = myNumberList.stream().allMatch(isEvenFunction);
+		boolean oneEven=myNumberList.stream().anyMatch(isEvenFunction);
+		boolean noneMultipleOfSix=myNumberList.stream().noneMatch(number->number>0 && number%6==0);
+
+		System.out.println("All even"+allEven+" one even : "+oneEven+" none multiple of six "+noneMultipleOfSix);
+		
 	}
 
 }
